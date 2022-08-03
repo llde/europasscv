@@ -342,7 +342,7 @@
   \addtolength{\difflength}{-0.6\ecv@logowidth}
   \noindent
   \begin{minipage}{0.5\textwidth}
-    \noindent\makebox[\ecv@leftcolwidth][l]{\noindent\raisebox{-6.5pt}[0pt][0pt]{\if@ecvlogo\includegraphics[width=0.6\ecv@logowidth]{europasslogo2013.pdf}\else \hspace{0.6\ecv@logowidth}\fi}\hspace{\difflength}\hspace{\ecv@colsep}{\ifx\@empty\ecv@notitle \empty \else \ecvcoloredtitle \fi}}
+    \noindent\makebox[\ecv@leftcolwidth][l]{\noindent\raisebox{-26.5pt}[0pt][0pt]{\if@ecvlogo\includegraphics[width=0.7\ecv@logowidth]{europass}\else \hspace{0.6\ecv@logowidth}\fi}\hspace{\difflength}\hspace{\ecv@colsep}{\ifx\@empty\ecv@notitle \empty \else \ecvcoloredtitle \fi}}
   \end{minipage}
   }
 }
@@ -354,7 +354,7 @@
   \addtolength{\difflength}{-\ecv@logowidth}
   \noindent
   \begin{minipage}{0.5\textwidth}
-    \noindent\makebox[\ecv@leftcolwidth][l]{\noindent\raisebox{-10.5pt}[0pt][0pt]{\if@ecvlogo\includegraphics[width=\ecv@logowidth]{europasslogo2013.pdf}\else \hspace{\ecv@logowidth}\fi}\hspace{\difflength}\hspace{\ecv@colsep}{\ifx\@empty\ecv@notitle \empty \else \ecvcoloredtitle \fi}}
+    \noindent\makebox[\ecv@leftcolwidth][l]{\noindent\raisebox{-40.5pt}[0pt][0pt]{\if@ecvlogo\includegraphics[width=\ecv@logowidth]{europass}\else \hspace{\ecv@logowidth}\fi}\hspace{\difflength}\hspace{\ecv@colsep}{\ifx\@empty\ecv@notitle \empty \else \ecvcoloredtitle \fi}}
   \end{minipage}
   }
 }
@@ -394,6 +394,7 @@
 \newcommand*{\ecvgitlabpage}[1]{\def\ecv@gitlabpage{#1}}
 \newcommand*{\ecvlinkedinpage}[1]{\def\ecv@linkedinpage{#1}}
 \newcommand*{\ecvscholarpage}[1]{\def\ecv@scholarpage{#1}}
+\newcommand*{\ecvdate}[1]{\def\ecv@date{#1}}
 
 \newif\if@ecvorcidlink\@ecvorcidlinkfalse
 \define@key{ecvorcid}{link}[true]{\@ecvorcidlinktrue}
@@ -429,6 +430,7 @@
 \ecvlastname{}
 \ecvname{\ecv@lastname\ \ecv@firstname}
 \ecvfootername{\ecv@name}
+\ecvdate{}
 \ecvaddress{}
 \ecvtelephone{}
 \ecvmobile{}
@@ -896,6 +898,7 @@
   \@ecvoverrideskiptrue
   \setlength{\ecv@currentskip}{\medskipamount}
 }
+\let\section\ecvsection
 
 \NewDocumentCommand\ecvtitle{o+m+m}{%
   \@ecvitemcommandfalse
